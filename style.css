@@ -1,0 +1,224 @@
+
+:root {
+    --bg-color: #000000;
+    --primary-text-color: #FFFFFF;
+    --secondary-text-color: #a0a0a0;
+    --border-color: #2a2a2a;
+    --font-logo: 'Bebas',sans-serif; 
+    --font-display: 'Anton', sans-serif; 
+    --font-body: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-text-color);
+    font-family: var(--font-body);
+}
+
+a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.top-bar {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo a {
+    font-family: var(--font-logo);
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.promo-link {
+    color: #e63946 !important;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.hamburger { display: none; background: none; border: none; color: var(--primary-text-color); font-size: 1.5rem; cursor: pointer; }
+.mobile-menu { display: none; } 
+
+.secondary-promo-bar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #121212;
+    padding: 10px 5%;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.promo-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.main-promo-banner {
+    background-color: #121212;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.main-promo-banner h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem); 
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.main-promo-banner p {
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+    margin-top: 0.5rem;
+}
+
+.page-header {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "breadcrumbs filters"
+        "title filters";
+    align-items: center;
+    gap: 1rem;
+}
+
+.breadcrumbs {
+    grid-area: breadcrumbs;
+    font-size: 0.8rem;
+    color: var(--secondary-text-color);
+}
+.breadcrumbs a { color: var(--secondary-text-color); }
+
+.page-title {
+    grid-area: title;
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.filters {
+    grid-area: filters;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.size-filter { display: flex; align-items: center; gap: 0.5rem; }
+.size-filter span { font-size: 0.8rem; color: var(--secondary-text-color); }
+.size-filter button {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--primary-text-color);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.size-filter button.active { background-color: var(--primary-text-color); color: var(--bg-color); }
+
+.sort-filter select {
+    background-color: var(--bg-color);
+    color: var(--primary-text-color);
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    font-family: var(--font-body);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    padding-bottom: 4rem;
+}
+
+.product-card {
+    text-align: center;
+}
+
+.product-image {
+    background-color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+.product-image img {
+    width: 100%;
+}
+
+.product-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.product-price {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .nav-links, .nav-icons, .secondary-promo-bar { display: none; }
+    .hamburger { display: block; }
+    .mobile-menu.active { display: flex; flex-direction: column; }
+    
+    .page-header {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "breadcrumbs"
+            "title"
+            "filters";
+        text-align: center;
+    }
+    .filters { justify-content: center; flex-wrap: wrap; }
+}
