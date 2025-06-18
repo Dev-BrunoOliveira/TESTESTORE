@@ -1,126 +1,197 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LARANJODINA | Urban Streetwear</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;700&family=UnifrakturMaguntia&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;700&family=UnifrakturMaguntia&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="top-bar">
-            <span>FRETE GRÁTIS EM COMPRAS ACIMA DE R$ 300,00</span>
+      <div class="top-bar">
+        <span>FRETE GRÁTIS EM COMPRAS ACIMA DE R$ 300,00</span>
+      </div>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#">LARANJODINA<span class="logo-highlight">STORE</span></a>
         </div>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="#" class="color=red">LARANJODINA</a> 
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">Lançamentos</a></li>
-                <li><a href="#">Roupas</a></li>
-                <li><a href="#">Acessórios</a></li>
-                <li><a href="#" class="promo-link">Promoção</a></li>
-            </ul>
-            <div class="nav-icons">
-                <a href="#"><i class="fas fa-search"></i></a>
-                <a href="#"><i class="fas fa-user"></i></a>
-                <a href="#"><i class="fas fa-shopping-bag"></i></a>
-            </div>
-            <button class="hamburger" id="hamburger-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-        <div class="mobile-menu" id="mobile-menu">
-            <a href="#">Lançamentos</a>
-            <a href="#">Roupas</a>
-            <a href="#">Acessórios</a>
-            <a href="#" class="promo-link">Promoção</a>
+        <ul class="nav-links">
+          <li><a href="#">Lançamentos</a></li>
+          <li><a href="#">Roupas</a></li>
+          <li><a href="#">Acessórios</a></li>
+          <li><a href="#" class="promo-link">Promoção</a></li>
+        </ul>
+        <div class="nav-icons">
+          <a href="#" aria-label="Pesquisar"><i class="fas fa-search"></i></a>
+          <a href="#" aria-label="Conta de usuário"
+            ><i class="fas fa-user"></i
+          ></a>
+          <a href="#" aria-label="Sacola de compras"
+            ><i class="fas fa-shopping-bag"></i
+          ></a>
         </div>
-        <div class="secondary-promo-bar">
-            <div class="promo-item"><i class="fas fa-truck"></i><span>FRETE GRÁTIS NAS COMPRAS ACIMA DE R$ 300</span></div>
-            <div class="promo-item"><i class="fas fa-credit-card"></i><span>PARCELE EM ATÉ 3X SEM JUROS</span></div>
-            <div class="promo-item"><i class="fas fa-percent"></i><span>5% DE CASHBACK EM TODAS AS COMPRAS</span></div>
+        <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu">
+        <button class="close-btn" id="close-btn" aria-label="Fechar menu">
+          &times;
+        </button>
+        <a href="#">Lançamentos</a>
+        <a href="#">Roupas</a>
+        <a href="#">Acessórios</a>
+        <a href="#" class="promo-link">Promoção</a>
+      </div>
+      <div class="secondary-promo-bar">
+        <div class="promo-item">
+          <i class="fas fa-truck"></i><span>FRETE GRÁTIS ACIMA DE R$ 300</span>
         </div>
+        <div class="promo-item">
+          <i class="fas fa-credit-card"></i
+          ><span>PARCELE EM ATÉ 3X SEM JUROS</span>
+        </div>
+        <div class="promo-item">
+          <i class="fas fa-percent"></i><span>5% DE CASHBACK</span>
+        </div>
+      </div>
     </header>
 
     <main>
-        <section class="main-promo-banner">
-            <h1>10% OFF EM TODO SITE COM O CUPOM: <span class="coupon-text">DNMTSTORE</span></h1>
-            <p>CUPOM VÁLIDO ATÉ JULHO</p>
-        </section>
+      <section class="main-promo-banner">
+        <h1>
+          10% OFF EM TODO SITE COM O CUPOM:
+          <span class="coupon-text">DNMTSTORE</span>
+        </h1>
+        <p>CUPOM VÁLIDO ATÉ JULHO</p>
+      </section>
 
-        <div class="container">
-            <div class="page-header">
-                <div class="breadcrumbs">
-                    <a href="#">HOME</a> > <a href="#">ROUPAS</a> > CAMISETAS
-                </div>
-                <h1 class="page-title">CAMISETAS</h1>
-                <div class="filters">
-                    <div class="size-filter">
-                        <span>TAMANHO</span>
-                        <button>P</button>
-                        <button>M</button>
-                        <button class="active">GG</button>
-                        <button>XGG</button>
-                    </div>
-                    <div class="sort-filter">
-                        <select name="sort" id="sort">
-                            <option value="destaques">DESTAQUES</option>
-                            <option value="menor-preco">MENOR PREÇO</option>
-                            <option value="maior-preco">MAIOR PREÇO</option>
-                        </select>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="page-header">
+          <div class="breadcrumbs">
+            <a href="#">HOME</a> > <a href="#">ROUPAS</a> > CAMISETAS
+          </div>
+          <h1 class="page-title">CAMISETAS</h1>
+          <div class="filters">
+            <div class="size-filter">
+              <span>TAMANHO</span>
+              <button>P</button>
+              <button>M</button>
+              <button class="active">GG</button>
+              <button>XGG</button>
+            </div>
+            <div class="sort-filter">
+              <select name="sort" id="sort" aria-label="Ordenar produtos">
+                <option value="destaques">DESTAQUES</option>
+                <option value="menor-preco">MENOR PREÇO</option>
+                <option value="maior-preco">MAIOR PREÇO</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <section class="product-section">
+          <div class="product-grid">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="./img/2PAC PEITA.png" alt="Camiseta 2PAC" />
+              </div>
+              <h3 class="product-name">2PAC FEAT DINA</h3>
+              <p class="product-price">R$ 89,90</p>
             </div>
 
-            <section class="product-section">
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="./img/2PAC PEITA.png" alt="Camiseta 2PAC" />
-                        </div>
-                        <h3 class="product-name">2PAC FEAT DINA</h3>
-                        <p class="product-price">R$ 89,90</p>
-                    </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img src="./img/AGOSTINHO PEITA.png" alt="Camiseta Agostinho" />
+              </div>
+              <h3 class="product-name">AGOSTINHO CARRARA</h3>
+              <p class="product-price">R$ 89,90</p>
+            </div>
 
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="./img/AGOSTINHO PEITA.png" alt="Camiseta Agostinho" />
-                        </div>
-                        <h3 class="product-name">AGOSTINHO CARRARA</h3>
-                        <p class="product-price">R$ 89,90</p>
-                    </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="./img/KENDRICK SB.png"
+                  alt="Camiseta Kendrick Lamar"
+                />
+              </div>
+              <h3 class="product-name">KENDRICK LAMAR</h3>
+              <p class="product-price">R$ 89,90</p>
+            </div>
 
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="./img/KENDRICK SB.png" alt="Camiseta Kendrick Lamar" />
-                        </div>
-                        <h3 class="product-name">KENDRICK LAMAR</h3>
-                        <p class="product-price">R$ 89,90</p>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="./img/TYLER PEITA.png" alt="Camiseta Tyler The Creator" />
-                        </div>
-                        <h3 class="product-name">TYLER THE CREATOR</h3>
-                        <p class="product-price">R$ 89,90</p>
-                    </div>
-                </div>
-            </section>
-        </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="./img/TYLER PEITA.png"
+                  alt="Camiseta Tyler The Creator"
+                />
+              </div>
+              <h3 class="product-name">TYLER THE CREATOR</h3>
+              <p class="product-price">R$ 89,90</p>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="footer">
-        </footer>
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h3>LARANJODINA</h3>
+          <p>Urban Streetwear desde 2024.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="Tiktok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Atendimento</h4>
+          <ul>
+            <li><a href="#">Fale Conosco</a></li>
+            <li><a href="#">Trocas e Devoluções</a></li>
+            <li><a href="#">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Institucional</h4>
+          <ul>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Receba nossas novidades e promoções.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Seu e-mail" />
+            <button type="submit">Cadastrar</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 LARANJODINA. Todos os direitos reservados.</p>
+      </div>
+    </footer>
 
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
